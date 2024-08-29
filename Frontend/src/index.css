@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+.slider-track{
+    -webkit-animation: scroll 40s linear infinite;
+    animation: scroll 40s linear infinite;
+    width: calc(350px * 10);
+
+}
+@-webkit-keyframes scroll {
+    0%{
+        transform: translateX((0));
+    }
+    100%{
+        transform: translateX(calc(-350px * 5));
+    }
+}
+@keyframes  scroll {
+    0%{
+        transform: translateX((0));
+    }
+    100%{
+        transform: translateX(calc(-350px * 5));
+    }
+}
