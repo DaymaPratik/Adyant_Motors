@@ -5,7 +5,7 @@ function HomeYearSection() {
     const [showYear,setShowYear]=useState([true,false,false,false]);
     useEffect(()=>{
         AOS.init({duration:1000})
-    },[showYear])
+    },[])
   return (
     <main className={`w-[100%] mx-auto flex justify-end items-end h-fit min-h-screen text-[12px] min-[768px]:text-[17px] font-semibold  gap-1 text-white relative 
         
@@ -15,7 +15,7 @@ function HomeYearSection() {
         ${showYear[1] && "bg-[url('https://images.unsplash.com/photo-1587906092407-0a93af0100a2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')]"}
          ${showYear[2] && "bg-[url('https://images.unsplash.com/photo-1633059170528-25950f7a1223?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')]"}
           ${showYear[3] && "bg-[url('https://images.unsplash.com/photo-1587906249071-4d9307be2648?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')]"} 
-        `} data-aos="fade-left"></section>
+        `} ></section>
         <section className="grid grid-cols-1 min-[768px]:grid-cols-4 items-end  relative h-fit bottom-0 left-0">
         <div className={`border-2 border-white p-2 min-[768px]:p-4 h-fit ${showYear[0] ?  'bg-blue-400' :  'bg-[#0000005e]'} transititon duration-150 ease-in`}>
             <h3 className="text-[30px] min-[768px]:text-[40px] font-bold cursor-pointer" onClick={()=>{setShowYear([true,false,false,false])}}>1999</h3>

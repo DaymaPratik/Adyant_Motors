@@ -4,7 +4,7 @@ function HomeFooter() {
     <footer className="bg-black h-fit min-h-[50vh] max-[600px]:place-items-start max-[1024px]:place-items-center py-10 grid grid-col-1 min-[600px]:grid-cols-2 min-[1024px]:grid-cols-4 gap-2   text-white text-[16px] ">
 
         <section className="flex flex-col  pt-[20px] min-[600px]:pt-[40px] min-[1024px]:pt-[80px] pl-[20px] gap-5 ">
-            <img src="../public/logo.png" alt="" className="h-[80px] min-[600px]:mx-auto w-[80px] "/>
+            <img src="/logo.png" alt="" className="h-[80px] min-[600px]:mx-auto w-[80px] "/>
             <p className="text-[20px] min-[600px]:text-center">A Leading Distributor Of Genuine & Dependable Automotive Parts</p>
         </section>
 

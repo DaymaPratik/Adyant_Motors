@@ -23,7 +23,7 @@ function HomeAboutSection() {
           its resilience and dedication to excellence in the automotive sector.
         </p>
         <figure data-aos="fade-left" className="w-[90%] max-[768px]:mx-auto min-[768px]:w-[30%] min-[1024px]:w-[40%] relative">
-        <img src="../public/gear.avif" alt="" className="h-[350px] min-[1024px]:h-[400px] z-[10] relative" />
+        <img src="/gear.avif" alt="" className="h-[350px] min-[1024px]:h-[400px] z-[10] relative" />
         <div className='absolute w-full h-full bg-black top-[20px] left-[-20px] min-[956px]:top-[50px] min-[956px]:left-[-50px] '>
         
         </div> 
