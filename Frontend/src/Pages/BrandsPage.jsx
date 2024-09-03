@@ -1,5 +1,4 @@
 import { useContext, useEffect } from "react"
-import HomeFooter from "../Components/HomeFooter"
 import SideBar from "../Components/SideBar"
 import { SideBarContext } from "../Context/SideBarContextProvider"
 import BrandsHero from "../Components/BrandsComponents/BrandsHero"
@@ -25,7 +24,7 @@ function BrandsPage() {
        <BrandsHero/>
        <BrandsIntro/>
        <BrandsBox/>
-      <HomeFooter/>
+     
       </div>
     )
   }

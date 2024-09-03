@@ -1,6 +1,7 @@
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 function LeadershipHero() {
   useEffect(()=>{
     AOS.init({duration:1000})
@@ -12,7 +13,13 @@ function LeadershipHero() {
 
     <h1 className="text-[35px] min-[756px]:text-[50px] font-extrabold " data-aos="fade-left">Leadership Team</h1>
     <div className="text-[20px] min-[756px]:text-[25px]  font-semibold  mt-5" data-aos="fade-up">
-      <p>Home <span> &gt;</span> about Us <span> &gt;</span> Leadership Team</p>
+    <p>
+        <Link to={"/"}> <span className='border-b-2 border-[#ff0000]' >Home</span></Link>
+          <span className='text-[#ff0000] text-[30px] font-extrabold'> &gt;</span> 
+        <Link to={"/about-us"}> <span  className='border-b-2 border-[#ff0000]'> About Us</span></Link>
+         <span className='text-[#ff0000] text-[30px] font-extrabold'> &gt;</span> 
+         <span>Leaderhip Team</span>
+      </p>
     </div>
    </main>
   )

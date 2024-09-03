@@ -29,10 +29,51 @@
     }
 }
 .scale-up-105{
-    transition: ease-in 0.7s;
+    transition: ease-in 0.3s;
 }
 .scale-up-105:hover{
     scale:105% !important; 
 }
+.changeBg{
+    position: relative;
+    overflow-x: hidden;
+    transition:all 0.5s ease-in;
+    
+}
+.changeBg::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:rgba(255, 0, 0, 0.708);
+    width: 100%;
+    height: 100%;
+    transform: translateY(-100%);
+    z-index: 1;
+    transition: all 0.5s ease-in;
+   
+}
+.changeBg:hover:before{
+    transform: translateY(0);
+}
+.changeBg:hover{
+    color: white;
+    box-shadow: 0px 0px 10px 1px black;
+    border: none;
+}
 
+.centered-div {
+    position: fixed; 
+    top: 10%;
+    width: 80vw;
+    height: 80vh;
+    margin: 0px auto;
+    background: rgba(21, 16, 16, 0.8); 
+    z-index: 100; 
+    color: red;
+}
 
+.centered-div img {
+    max-width: 100%;
+    max-height: 80vh;
+}

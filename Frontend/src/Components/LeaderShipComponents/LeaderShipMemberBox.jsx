@@ -1,4 +1,10 @@
+import 'aos/dist/aos.css';
+import AOS from 'aos';
+import {  useEffect } from 'react'
 function LeaderShipMemberBox() {
+  useEffect(()=>{
+    AOS.init({ duration: 1000 })
+},[])
      let leaderArray=[
         {
             name:"Rohit Sharma",
@@ -28,14 +34,15 @@ function LeaderShipMemberBox() {
         }
              
     ]
-
+    let delay=100;
     return (
       <main className="grid grid-cols-1  min-[600px]:grid-cols-2 min-[1024px]:grid-cols-3  gap-3 min-[768px]:gap-5 w-[95%] min-[1256px]:w-[80%] mx-auto py-10 min-h-screen h-fit">
 
        {
         leaderArray.map((item,idx)=>{
+          delay=delay+ 50;
             return (
-        <section key={idx} className=" duration-200 hover:shadow-[0px_0px_3px_0px_black] relative text-center w-full h-[500px] shadow-md">
+        <section key={idx} className=" duration-200 hover:shadow-[0px_0px_3px_0px_black] relative text-center w-full h-[500px] shadow-md" data-aos="fade-left" data-aos-delay={delay}>
         <div className="relative w-full h-[80%]">
           <img
             src="https://images.unsplash.com/photo-1555436169-20e93ea9a7ff?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"

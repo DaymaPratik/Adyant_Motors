@@ -5,18 +5,17 @@ function HomeFooter() {
       text-white text-[16px] ">
 
 
-        <section className="flex flex-col  max-[500px]:items-center  py-[20px] min-[600px]:py-[40px] w-[100%] min-[1024px]:py-[80px]  gap-5">
-            <img src="/logo.png" alt="" className="h-[80px] block w-[80px] mx-auto"/>
-            <p className="text-[25px] max-[350px]:text-[30px] text-center font-semibold">Adyant Motors</p>
+        <section className="flex flex-col  max-[500px]:items-center min-[500px]:pl-[30px]  py-[20px] min-[600px]:py-[40px] w-[100%] min-[1024px]:py-[80px]  gap-5">
+            <img src="/logo.png" alt="" className="h-[80px] block w-[80px] max-[500px]:mx-auto"/>
+            <p className="text-[25px] max-[350px]:text-[30px] max-[500px]:text-center font-semibold">Adyant Motors</p>
         </section>
 
         <section  className="flex flex-col  max-[500px]:items-center  w-[100%] pt-[20px] min-[600px]:pt-[40px] min-[1024px]:pt-[80px] p-[15px]  gap-3 ">
             <h6 className="text-red-400  text-[25px] font-bold ">Contact Us</h6>
-            <p className=" text-[13px]  min-[1024px]:text-[14px] ">
-            <span className="font-bold">
-             Email : 
+            <p className=" text-[15px]  min-[1024px]:text-[17px] ">
+            <span className="font-bold ">
+             Email : Adyant123@gmail.com
             </span>
-            <span> Adyant123@gmail.com</span>
             </p>
             <p>
             <span className="font-bold">
@@ -27,11 +26,11 @@ function HomeFooter() {
         
         <section  className="flex flex-col  max-[500px]:items-center  w-[100%]   pt-[20px] min-[600px]:pt-[40px] min-[1024px]:pt-[80px] p-[20px]    gap-3  ">
             <h6 className="text-red-400  text-[25px] font-bold ">Quick Links</h6>
-            <ul className=" flex-col flex   gap-1">
-                <li className="cursor-pointer   hover:text-[red] duration-200 w-fit ease-in border-2 border-transparent  hover:border-b-[red]">Awards & Recognization</li>
-                <li className="cursor-pointer    hover:text-[red] duration-200 ease-in border-2 border-transparent w-fit hover:border-b-[red]">Leadership Team</li>
-                <li className="cursor-pointer  hover:text-[red] duration-200 ease-in border-2 border-transparent w-fit hover:border-b-[red]">Investor Relation</li>
-            </ul>
+            <div className=" flex-col flex max-[500px]:items-center gap-1">
+                <p className="cursor-pointer   hover:text-[red]  duration-200 w-fit ease-in border-2 border-transparent  hover:border-b-[red]">Awards & Recognization</p>
+                <p className="cursor-pointer    hover:text-[red] duration-200 ease-in border-2 border-transparent w-fit hover:border-b-[red]">Leadership Team</p>
+                <p className="cursor-pointer  hover:text-[red] duration-200 ease-in border-2 border-transparent w-fit hover:border-b-[red]">Investor Relation</p>
+            </div>
         </section>
 
         <section  className="flex flex-col  max-[500px]:items-center   w-[100%] pt-[20px] min-[600px]:pt-[40px] min-[1024px]:pt-[80px] p-[15px]    gap-3">

@@ -1,7 +1,6 @@
 import { useContext, useEffect } from "react";
 import { SideBarContext } from "../Context/SideBarContextProvider";
 import SideBar from "../Components/SideBar";
-import HomeFooter from "../Components/HomeFooter";
 import LeadershipHero from "../Components/LeaderShipComponents/LeadershipHero";
 import LeaderShipMemberBox from "../Components/LeaderShipComponents/LeaderShipMemberBox";
 
@@ -17,7 +16,6 @@ return (
     {showSideBar && <SideBar />}
     <LeadershipHero/>
     <LeaderShipMemberBox/>
-    <HomeFooter />
   </div>
 );
 }

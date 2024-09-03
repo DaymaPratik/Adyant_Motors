@@ -10,8 +10,8 @@ function BrandsIntro() {
   
 
     <div className="flex max-[956px]:mt-[20px] flex-col justify-center w-[90%] max-[956px]:mx-auto min-[956px]:w-[60%] min-[1024px]:w-[55%] gap-1 min-[600px]:gap-3 text-[17px] pl-2 min-[600px]:pl-10" data-aos="fade-right">
-      <p className="text-[20px] uppercase font-semibold text-blue-500">Building strategic partnerships with industry leaders.</p>
-      <h5 className="text-[30px] font-bold">Our Brand Partners</h5>
+      <p className="text-[17px] min-[500px]:text-[20px] uppercase font-semibold text-blue-500">Building strategic partnerships with industry leaders.</p>
+      <h5 className="text-[25px] min-[500px]:text-[30px] font-bold">Our Brand Partners</h5>
       <p className="font-semibold p-2 max-[500px]:text-[15px]">
       With a proud legacy of 25 years in the automotive parts trade, adhyan Group has established itself as a beacon of excellence in the industry. 
       Our longstanding partnerships with Indias most reputable automotive OE brands enable us to offer genuine and premium quality products, 
@@ -27,7 +27,7 @@ function BrandsIntro() {
     min-[600px]:gap-3 text-[17px] pl-2 min-[600px]:pl-10 bg-center bg-no-repeat bg-cover 
     bg-[url('https://images.unsplash.com/photo-1500220621438-7f1c548f639a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')]" 
     data-aos="fade-left">
-        <h5 className="text-[30px] font-bold">Our legacy is built on the pillars of:</h5>
+        <h5 className="text-[20px] min-[400]:text-[25px] min-[768px]:text-[30px] font-bold">Our legacy is built on the pillars of:</h5>
         <ul className="font-semibold p-2 max-[500px]:text-[15px]" >
             <li>- Unwavering commitment to quality and safety</li>
             <li>- Continuous innovation and improvement</li>

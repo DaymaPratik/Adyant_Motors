@@ -1,20 +1,10 @@
-import 'aos/dist/aos.css';
-import AOS from 'aos';
-import { useContext, useEffect } from 'react';
-import { Link } from "react-router-dom";
-import { SideBarContext } from '../Context/SideBarContextProvider';
+import { Link } from "react-router-dom"
 
-function AboutUsBar() {
-    const {setShowAboutUs,  setAboutUsHover}=useContext(SideBarContext)
-    useEffect(()=>{
-        AOS.init({ duration: 1000 })
-    },[])
+function AboutUsSideBar() {
   return (
     <ul
-    data-aos="fade-down"
-    className={`fixed top-[70px] text-[20px] text-black font-semibold w-fit p-3 h-fit bg-white  z-[9999] `}
-    onMouseOver={ () => { setAboutUsHover(true);setShowAboutUs(true) }}
-    onMouseOut={ () => { setShowAboutUs(false); setAboutUsHover(false)}}
+    data-aos="fade-left"
+    className={`text-[20px] text-black font-semibold w-fit py-3 h-fit bg-white  z-[9999] `}
   >
     <Link to={"/about-us/companies"}>
       <li className="border-2 border-transparent hover:text-[#ff0000] cursor-pointer hover:border-b-[#ff0000] transition duration-150 ease-in p-2">
@@ -36,4 +26,4 @@ function AboutUsBar() {
   )
 }
 
-export default AboutUsBar
+export default AboutUsSideBar

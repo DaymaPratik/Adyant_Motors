@@ -44,7 +44,7 @@ function CompanyDetailsBox() {
         companiesDetailsArray.map((item,idx)=>{
             return(
                 <div className=" flex flex-col py-2 px-5 bg-[#00000096] text-white transition ease-in duration-500 hover:shadow-[0px_0px_10px_5px_black] scale-up-105 rounded-md" key={idx} data-aos="fade-left">
-                    <h4 className="text-[20px] min-[600px]:text-[25px] min-[1024px]:text-[30px] text-center font-bold my-1 text-[#ff0000]">{item.title}</h4>
+                    <h4 className="text-[20px] min-[600px]:text-[25px] min-[1024px]:text-[30px] text-center font-bold my-1">{item.title}</h4>
                     <p className="text-center text-[13px] min-[600px]:text-[15px] font-semibold my-2 px-1">{item.details}</p>
                     <p className="text-center text-[11px] min-[600px]:text-[14px] px-1">{item.extraDetails1}</p>
                     <ul className="text-[14px] min-[600px]:text-[17px] font-bold my-2">

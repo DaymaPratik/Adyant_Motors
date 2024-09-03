@@ -1,6 +1,7 @@
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 import { useEffect } from 'react';
+import { Link } from "react-router-dom";
 function HomeHeroSection() {
   useEffect(()=>{
     AOS.init({ duration: 1000 })
@@ -12,8 +13,12 @@ function HomeHeroSection() {
     <p className="text-[15px] min-[400px]:text-[17px] min-[756px]:text-[22px] font-bold  mb-[-10px]" data-aos="fade-left">Ensuring vehicles safety and owners safety by supplying</p>
     <h1 className="text-[25px] min-[350px]:text-[28px] min-[400px]:text-[35px] min-[756px]:text-[50px] font-extrabold " data-aos="fade-left">Authentic & Genuine <br /> Automative Parts</h1>
     <div className="text-[15px] min-[400px]:text-[20px] min-[756px]:text-[25px]  font-semibold gap-5 min-[400px]:gap-10 text-animate p-3 flex justify-center items-center mt-5 min-[1024px]:mt-10" data-aos="fade-up">
-        <button className="p-2 hover:bg-[#00ff00] transition ease-in duration-150 rounded  bg-[#43ff64d9]">More About Us</button>
-        <button className="p-2 hover:bg-[#00ff00] transition ease-in duration-150 rounded bg-[#43ff64d9]">Contact Us</button>
+        <Link to={"/about-us"}>
+        <button className="p-2 px-3 hover:bg-[#181729d9] transition ease-in duration-150 rounded  bg-[#2f2b6fd9]">More About Us</button>
+        </Link>
+       <Link to={"/contact-us"}>  
+       <button className="p-2 px-3 hover:bg-[#181729d9] transition ease-in duration-150 rounded bg-[#2f2b6fd9]">Contact Us</button>
+       </Link>
     </div>
    </main>
   )

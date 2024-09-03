@@ -3,7 +3,7 @@ import CareersBenifitsSection from "../Components/CareersPageComponent/CareersBe
 import CareersHeroSection from "../Components/CareersPageComponent/CareersHeroSection"
 import CareersIntroSection from "../Components/CareersPageComponent/CareersIntroSection"
 import CareersOpeningSection from "../Components/CareersPageComponent/CareersOpeningSection"
-import HomeFooter from "../Components/HomeFooter"
+
 import SideBar from "../Components/SideBar"
 import { SideBarContext } from "../Context/SideBarContextProvider"
 
@@ -23,7 +23,7 @@ function CareersPage() {
         <CareersIntroSection/>
         <CareersBenifitsSection/>
         <CareersOpeningSection/>
-        <HomeFooter/>
+       
     </div>
   )
 }

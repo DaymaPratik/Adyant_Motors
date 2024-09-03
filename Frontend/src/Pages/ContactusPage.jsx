@@ -4,7 +4,6 @@ import SideBar from "../Components/SideBar"
 import ContactPageHero from "../Components/ConatctPageComponents/ContactPageHero"
 import ContactIframeBox from "../Components/ConatctPageComponents/ContactIframeBox"
 import ContactFormBox from "../Components/ConatctPageComponents/ContactFormBox"
-import HomeFooter from "../Components/HomeFooter"
 
 function ContactusPage() {
     const {showSideBar,setShowSideBar,setShowAboutUs}=useContext(SideBarContext)
@@ -21,7 +20,6 @@ function ContactusPage() {
   <ContactPageHero/>
   <ContactIframeBox/>
   <ContactFormBox/>
-  <HomeFooter/>
    
    </div>
   )

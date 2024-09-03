@@ -4,7 +4,6 @@ import { useContext, useEffect } from "react";
 import AboutUsHero from "../Components/AboutusComponents/AboutUsHero";
 import MisssionVision from "../Components/MisssionVision";
 import WhoWeAre from "../Components/AboutusComponents/WhoWeAre";
-import HomeFooter from "../Components/HomeFooter";
 import HomeYearSection from "../Components/HomePageComponents/HomeYearSection";
 
 function AboutUsPage() {
@@ -23,7 +22,7 @@ function AboutUsPage() {
       <MisssionVision />
       <WhoWeAre />
       <HomeYearSection />
-      <HomeFooter />
+      
     </div>
   );
 }
