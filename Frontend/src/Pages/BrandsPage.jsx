@@ -5,6 +5,7 @@ import { SideBarContext } from "../Context/SideBarContextProvider"
 import BrandsHero from "../Components/BrandsComponents/BrandsHero"
 import BrandsBox from "../Components/BrandsComponents/BrandsBox"
 import AboutUsBar from "../Components/AboutUsBar"
+import BrandsIntro from "../Components/BrandsComponents/BrandsIntro"
 
 function BrandsPage() {
     const {showSideBar,setShowSideBar,aboutUsBar}=useContext(SideBarContext)
@@ -22,6 +23,7 @@ function BrandsPage() {
         aboutUsBar && <AboutUsBar/>
        }
        <BrandsHero/>
+       <BrandsIntro/>
        <BrandsBox/>
       <HomeFooter/>
       </div>

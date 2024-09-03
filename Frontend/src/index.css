@@ -29,7 +29,7 @@
     }
 }
 .scale-up-105{
-    transition: ease-in 0.3s;
+    transition: ease-in 0.7s;
 }
 .scale-up-105:hover{
     scale:105% !important; 
