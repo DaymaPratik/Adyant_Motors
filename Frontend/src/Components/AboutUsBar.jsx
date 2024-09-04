@@ -12,7 +12,7 @@ function AboutUsBar() {
   return (
     <ul
     data-aos="fade-down"
-    className={`fixed top-[70px] text-[20px] text-black font-semibold w-fit p-3 h-fit bg-white  z-[9999] `}
+    className={`fixed top-[90px] text-[20px] text-black font-semibold w-fit p-3 h-fit bg-white  z-[9999] `}
     onMouseOver={ () => { setAboutUsHover(true);setShowAboutUs(true) }}
     onMouseOut={ () => { setShowAboutUs(false); setAboutUsHover(false)}}
   >

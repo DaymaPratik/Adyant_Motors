@@ -22,17 +22,17 @@ function HomeWhatWeDo2() {
     let delay=100;
   return (
    <main className="min-h-[70vh] flex flex-col my-[50px] gap-5 justify-center items-center h-fit text-center w-[90%] mx-auto">
-    <h2 className="font-bold text-center text-[25px] min-[400px]:text-[30px] min-[768px]:text-[40px] ">Packing And Loading</h2>
-    <p className="font-bold text-center text-[17px] min-[400px]:text-[20px] text-blue-800 ">Services</p>
-    <section className="grid grid-cols-1 sm:grid-cols-2 my-5 md:grid-cols-3 h-fit gap-5 min-[956px]:gap-10 w-[100%] mx-auto place-items-center justify-items-center" data-aos="fade-left" data-aos-delay={delay}>
+    <h2 className="font-bold text-center text-[25px] xs:text-[30px] md:text-[40px] ">Packing And Loading</h2>
+    <p className="font-bold text-center text-[17px] xs:text-[20px] text-blue-800 ">Services</p>
+    <section className="grid grid-cols-1 sm:grid-cols-2 my-5 md:grid-cols-3 h-fit gap-5 lg:gap-10 w-[100%] mx-auto place-items-center justify-items-center" data-aos="fade-left" >
     {
         whatWeDoArray?.map((item,idx)=>{
             delay += 50;
             return( 
-            <div key={idx} className="h-[350px] min-[768px]:h-[400px] min-[956px]:h-[500px] scale-up-105 relative hover:shadow-[0px_0px_10px_1px_#ff0000] w-full">
+            <div key={idx} className="h-[350px] md:h-[400px] xlg:h-[600px] scale-up-105 relative hover:shadow-[0px_0px_10px_1px_#ff0000] w-full" data-aos-delay={delay} data-aos="fade-left">
                   <img src={item.src} alt="" className="h-full w-full"/>
                   <div className="absolute top-0 left-0 w-full h-full bg-[#f83939c4]  opacity-0 hover:opacity-100 transition ease-in duration-[300ms] flex items-center justify-center text-white p-4">
-                    <p className="text-[25px] font-semibold min-[768px]:text-[35px]  p-1 min-[768px]:p-2 ">
+                    <p className="text-[25px] font-semibold md:text-[35px]  p-1 md:p-2 ">
                      {item.details}
                     </p>
                   </div>

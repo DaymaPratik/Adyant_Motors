@@ -13,7 +13,7 @@ function SideBar() {
   return (
     <ul 
     data-aos="fade-left" 
-    className={`fixed top-[70px] left-0 min-[1024px]:hidden text-[20px] font-semibold w-fit px-10 h-fit bg-white  p-5 z-[9999] `}
+    className={`fixed top-[90px] left-0 min-[1024px]:hidden text-[20px] font-semibold w-fit px-10 h-fit bg-white  p-5 z-[9999] `}
   >
     
     <Link to={"/"}>

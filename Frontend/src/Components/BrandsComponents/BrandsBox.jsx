@@ -12,33 +12,34 @@ function BrandsBox() {
        <figure className="  flex justify-center items-center">
         <img src="/hero.png" alt="" className="sm:h-[150px] h-[120px] mx-auto"/>
        </figure>
-       <figure className="  flex justify-center items-center">
-        <img src="/bajaj.png" alt="" className="sm:h-[150px] h-[120px] mx-auto"/>
-       </figure>
-       <figure className="  flex justify-center items-center">
-        <img src="/shreeamba.png" alt="" className="sm:h-[150px] h-[120px] mx-auto"/>
-       </figure>
-       <figure className="  flex justify-center items-center">
-        <img src="/vega.png" alt="" className="sm:h-[150px] h-[120px] mx-auto"/>
-       </figure>
+      
        <figure className="  flex justify-center items-center">
         <img src="/pricol.png" alt="" className="sm:h-[150px] h-[120px] mx-auto"/>
        </figure>
        <figure className="  flex justify-center items-center">
-        <img src="/bajaj.png" alt="" className="h-[150px] mx-auto"/>
+        <img src="/ngk.png"  alt="" className="sm:h-[150px] h-[120px] mx-auto"/>
        </figure>
        <figure className="  flex justify-center items-center">
-        <img src="/unitech.png" alt="" className="sm:h-[150px] h-[120px] mx-auto"/>
+        <img src="/osram.png" alt="" className="sm:h-[150px] h-[120px] mx-auto"/>
+       </figure>
+      
+       <figure className="  flex justify-center items-center">
+        <img src="/pricol.png" alt="" className="sm:h-[150px] h-[120px] mx-auto"/>
        </figure>
        <figure className="  flex justify-center items-center">
-        <img src="/bajaj.png" alt="" className="sm:h-[150px] h-[120px] mx-auto"/>
+        <img src="/TVS.png" alt="" className="sm:h-[150px] h-[120px] mx-auto"/>
        </figure>
        <figure className="  flex justify-center items-center">
-        <img src="/steelbird.png" alt="" className="sm:h-[150px] h-[120px] mx-auto"/>
+        <img src="/uno-minda.png" alt="" className="sm:h-[150px] h-[120px] mx-auto"/>
        </figure>
+      
        <figure className="  flex justify-center items-center">
-        <img src="/singagroup.png" alt="" className="sm:h-[150px] h-[120px] mx-auto"/>
+        <img src="/royalenfield.png" alt="" className="sm:h-[150px] h-[120px] mx-auto"/>
        </figure>
+      
+      
+      
+       
       
    </main>
   </main>
