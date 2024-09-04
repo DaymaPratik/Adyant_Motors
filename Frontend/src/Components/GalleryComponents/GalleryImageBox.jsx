@@ -8,6 +8,7 @@ import AwardsImages from './AwardsImages';
 import TrainingImages from './TrainingImages';
 import GoGreenImages from './GoGreenImages';
 import EmployeeImages from './EmployeeImages';
+
 function GalleryImageBox() {
 
     const [type,setType]=useState("Infrastructure")
@@ -16,9 +17,9 @@ function GalleryImageBox() {
     },[])
   return (
     <main className="flex justify-center my-10 text-center items-center gap-5 flex-col min-h-[60vh] h-fit">
-    <p className="font-bold text-[17px] min-[400px]:text-[20px] text-blue-800 " data-aos="fade-left">A Glance At!</p>
-   <h3 className="font-bold text-[25px] min-[400px]:text-[30px] min-[768px]:text-[40px]" data-aos="fade-left">Some Snapshots ?</h3>
-    <div className='flex flex-wrap gap-2 min-[600px]:gap-4 min-[768px]:gap-7 text-[17px] min-[768px]:text-[20px] min-[1024px]:text-[25px] font-semibold w-[100%] 
+    <p className="font-bold text-[17px] xs:text-[20px] text-blue-800 " data-aos="fade-left">A Glance At!</p>
+   <h3 className="font-bold text-[25px] xs:text-[30px] md:text-[40px]" data-aos="fade-left">Some Snapshots ?</h3>
+    <div className='flex flex-wrap gap-2 sm:gap-4 md:gap-7 text-[13px] xs:text-[17px] md:text-[20px] lg:text-[25px] font-semibold w-[100%] 
     items-center justify-center py-2 '>
         <p onClick={()=>{setType("Infrastructure")}} className={`${type === "Infrastructure" && "border-b-[3px] border-[#0000ff]"} hover:cursor-pointer duration-150  ease-in hover:border-b-[3px] hover:border-[#ff0000] hover:text-[#ff0000]`}>Infrastructure</p>
         <p onClick={()=>{setType("Products")}} className={`${type === "Products" && "border-b-[3px] border-[#0000ff]"}  hover:cursor-pointer duration-150 ease-in hover:border-b-[3px] hover:border-[#ff0000] hover:text-[#ff0000]`}>Products</p>

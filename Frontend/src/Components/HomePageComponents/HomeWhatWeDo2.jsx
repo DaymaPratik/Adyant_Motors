@@ -24,7 +24,7 @@ function HomeWhatWeDo2() {
    <main className="min-h-[70vh] flex flex-col my-[50px] gap-5 justify-center items-center h-fit text-center w-[90%] mx-auto">
     <h2 className="font-bold text-center text-[25px] min-[400px]:text-[30px] min-[768px]:text-[40px] ">Packing And Loading</h2>
     <p className="font-bold text-center text-[17px] min-[400px]:text-[20px] text-blue-800 ">Services</p>
-    <section className="grid grid-cols-1 min-[500px]:grid-cols-2 my-5 min-[768px]:grid-cols-3 h-fit gap-5 min-[956px]:gap-10 w-[100%] mx-auto place-items-center justify-items-center" data-aos="fade-left" data-aos-delay={delay}>
+    <section className="grid grid-cols-1 sm:grid-cols-2 my-5 md:grid-cols-3 h-fit gap-5 min-[956px]:gap-10 w-[100%] mx-auto place-items-center justify-items-center" data-aos="fade-left" data-aos-delay={delay}>
     {
         whatWeDoArray?.map((item,idx)=>{
             delay += 50;

@@ -45,7 +45,7 @@ function CareersBenifitsSection() {
   return (
    <main className="min-h-[70vh] h-fit  text-center" >
     <h4 className="font-bold text-[30px] my-10" data-aos="fade-left">Benifits</h4>
-    <section className="grid gap-5 grid-cols-1 min-[400px]:grid-cols-2 min-[600px]:grid-cols-3  min-[1024px]:grid-cols-4  w-[90%] min-[768px]:w-[80%] mx-auto my-10" data-aos="fade-left">     
+    <section className="grid gap-5 grid-cols-1 xs:grid-cols-2 sm:grid-cols-3  xlg:grid-cols-4  w-[90%] md:w-[80%] mx-auto my-10" data-aos="fade-left">     
    
         {
             benifitsArray.map((item)=>{
@@ -53,11 +53,11 @@ function CareersBenifitsSection() {
                 return(
                 <div key={item.title} className="border-[1px] scale-up-105 border-[#9b9a9b]   text-center p-5 hover:text-white hover:border-none hover:shadow-[0px_0px_10px_3px_black] hover:bg-[#323c64]
               transition duration-[300ms] ease-in " data-aos="fade-left" data-aos-delay={delay}>
-                    <div className="text-[25px] min-[768px]:text-[30px] text-white  bg-[#000000] mx-auto w-fit text-center p-2 min-[768px]:p-3 rounded-[50%]" >
+                    <div className="text-[25px] md:text-[30px] text-white  bg-[#000000] mx-auto w-fit text-center p-2 min-[768px]:p-3 rounded-[50%]" >
                        <TiTick />
                     </div>
-                    <p className="py-3 min-[768px]:py-5 font-semibold text-[16px] min-[400px]:text-[18px] min-[768px]:text-[20px]" >{item.title}</p>
-                    <p className="text-[13px] font-semibold min-[768px]:text-[15px]">{item.subject}</p>
+                    <p className="py-3 md:py-5 font-semibold text-[16px] xs:text-[18px] md:text-[20px]" >{item.title}</p>
+                    <p className="text-[13px] font-semibold md:text-[15px]">{item.subject}</p>
                 </div>
                 )
             })

@@ -1,51 +1,47 @@
-
+import { Link } from "react-router-dom";
 function HomeFooter() {
   return (
-    <footer className="bg-black h-fit min-h-[60vh] px-[2%] jusitfy-iems-center py-10 grid grid-col-1 min-[500px]:grid-cols-2 min-[1024px]:grid-cols-4  
-      text-white text-[16px] ">
+    <footer className="bg-black sm:h-[70vh] px-4 py-10 grid grid-cols-1 sm:grid-cols-2 xlg:grid-cols-4 text-white text-base">
+      <section className="flex flex-col items-center sm:pl-8 py-5 sm:py-10 w-full gap-5">
+        <img src="/logo.png" alt="Logo" className="h-20 w-20 mx-auto" />
+        <p className="text-2xl min-[350px]:text-3xl font-semibold text-center">Adyant Motors</p>
+      </section>
 
+      <section className="flex flex-col items-center w-full pt-5 sm:pt-10 p-4 gap-3">
+        <h6 className="text-red-400 text-2xl font-bold">Contact Us</h6>
+        <p className="text-base xlg:text-lg">
+          <span className="font-bold">Email:</span> Adyant123@gmail.com
+        </p>
+        <p>
+          <span className="font-bold">Phone:</span> 9876543210
+        </p>
+      </section>
 
-        <section className="flex flex-col  max-[500px]:items-center min-[500px]:pl-[30px]  py-[20px] min-[600px]:py-[40px] w-[100%] min-[1024px]:py-[80px]  gap-5">
-            <img src="/logo.png" alt="" className="h-[80px] block w-[80px] max-[500px]:mx-auto"/>
-            <p className="text-[25px] max-[350px]:text-[30px] max-[500px]:text-center font-semibold">Adyant Motors</p>
-        </section>
+      <section className="flex flex-col items-center w-full pt-5 sm:pt-10 p-4 gap-3">
+        <h6 className="text-red-400 text-2xl font-bold">Quick Links</h6>
+        <div className="flex flex-col items-center gap-1">
+          <Link to={"/about-us/brands"}>
+          <p className="cursor-pointer hover:text-red-500 duration-200 w-fit">Our Brands</p>
+          </Link>
+         <Link to={"/about-us/leadership"}>
+         <p className="cursor-pointer hover:text-red-500 duration-200 w-fit">Leadership Team</p>
+         </Link>
+          <Link to={"/about-us/companies"}>
+          <p className="cursor-pointer hover:text-red-500 duration-200 w-fit">Our Comapnies</p>
+          </Link>
+        </div>
+      </section>
 
-        <section  className="flex flex-col  max-[500px]:items-center  w-[100%] pt-[20px] min-[600px]:pt-[40px] min-[1024px]:pt-[80px] p-[15px]  gap-3 ">
-            <h6 className="text-red-400  text-[25px] font-bold ">Contact Us</h6>
-            <p className=" text-[15px]  min-[1024px]:text-[17px] ">
-            <span className="font-bold ">
-             Email : Adyant123@gmail.com
-            </span>
-            </p>
-            <p>
-            <span className="font-bold">
-             Phone : 9876543210
-            </span>
-            </p>
-        </section>
-        
-        <section  className="flex flex-col  max-[500px]:items-center  w-[100%]   pt-[20px] min-[600px]:pt-[40px] min-[1024px]:pt-[80px] p-[20px]    gap-3  ">
-            <h6 className="text-red-400  text-[25px] font-bold ">Quick Links</h6>
-            <div className=" flex-col flex max-[500px]:items-center gap-1">
-                <p className="cursor-pointer   hover:text-[red]  duration-200 w-fit ease-in border-2 border-transparent  hover:border-b-[red]">Awards & Recognization</p>
-                <p className="cursor-pointer    hover:text-[red] duration-200 ease-in border-2 border-transparent w-fit hover:border-b-[red]">Leadership Team</p>
-                <p className="cursor-pointer  hover:text-[red] duration-200 ease-in border-2 border-transparent w-fit hover:border-b-[red]">Investor Relation</p>
-            </div>
-        </section>
-
-        <section  className="flex flex-col  max-[500px]:items-center   w-[100%] pt-[20px] min-[600px]:pt-[40px] min-[1024px]:pt-[80px] p-[15px]    gap-3">
-            <h6 className="text-red-400  text-[25px] font-bold ">Loacte Us</h6>
-            <address className="font-normal   max-[400px]:text-[12px]">
-           <span className="font-bold text-[17px] ">
-             Address :  
-            </span>
-             survey no. 45/46, Panchmukhi nagar, Plot no.11438, 66A, Jalna - Aurangabad Rd, behind satish motors, Jalna Industrial Area MIDC, Jalna, Maharashtra 431213
-            </address>
-        </section>
-
-      
+      <section className="flex flex-col items-center w-full pt-5 sm:pt-10 p-4 gap-3">
+        <h6 className="text-red-400 text-2xl font-bold">Locate Us</h6>
+        <address className="font-normal text-sm xlg:text-base">
+          <span className="font-bold text-lg">Address:</span>
+          <br />
+          Survey No. 45/46, Panchmukhi Nagar, Plot No. 11438, 66A, Jalna - Aurangabad Rd, Behind Satish Motors, Jalna Industrial Area MIDC, Jalna, Maharashtra 431213
+        </address>
+      </section>
     </footer>
-  )
+  );
 }
 
-export default HomeFooter
+export default HomeFooter;

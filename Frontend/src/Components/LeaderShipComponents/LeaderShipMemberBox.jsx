@@ -23,12 +23,12 @@ function LeaderShipMemberBox() {
             details:"He took the torch from his father and is the second generation of the Group. After he underwent training with his father, he has kept in tune with the ethos of the Group. He believes that a successful business can be built through strong relationships and ethics. Under his leadership, he has made MKP Mobility a respected name in the Automotive Industry. Further, he is behind the Group’s association with the top Automotive brands in the country like Hero, Maruti, Tata, Royal Enfield, TVS, Honda and the expansion of operations throughout the state of Maharashtra."
         },
         {
-            name:"Kirmada Sharma",
+            name:"Santosh Tiwari",
             designation:"Director",
             details:"Youngest businessman of the family, he has high dreams for the future of the company. His passion for automobiles and cars encouraged him to pursue racing as a hobby. Like the perfectionists in the family, he too has excelled and holds various ranks across India as well as a National Championship trophy in motorsports. He has completed his studies in B.Tech and aims to grow the company operations by diversifying into other sectors."
         },
         {
-            name:"Rohit Sharma",
+            name:"Rishiskesh Navandar",
             designation:"Director",
             details:"Driven with passion and interest in Automobiles, he was eager to join the thriving family business. After completing his studies in BTech and Masters in Entrepreneurship from Babson College in Boston, he spent a year in Mumbai to learn the aspects of the Group’s operations and business in a practical environment. With his skills honed, he has become an indispensable part of the Group. He was a key player in bringing brands, Idemitsu and CEAT under the Group’s umbrella."
         }
@@ -36,7 +36,7 @@ function LeaderShipMemberBox() {
     ]
     let delay=100;
     return (
-      <main className="grid grid-cols-1  min-[600px]:grid-cols-2 min-[1024px]:grid-cols-3  gap-3 min-[768px]:gap-5 w-[95%] min-[1256px]:w-[80%] mx-auto py-10 min-h-screen h-fit">
+      <main className="grid grid-cols-1  sm:grid-cols-2 xlg:grid-cols-3  gap-3 md:gap-5 w-[95%] xl:w-[80%] mx-auto py-10 min-h-screen h-fit">
 
        {
         leaderArray.map((item,idx)=>{
@@ -50,13 +50,13 @@ function LeaderShipMemberBox() {
             className="w-full h-full object-cover"
           />
                   <div className="absolute top-0 left-0 w-full h-full bg-[#161414c4] border-2 border-black opacity-0 hover:opacity-100 transition ease-in duration-[300ms] flex items-center justify-center text-white p-4">
-                    <p className="text-[13px] scale-up-105 min-[768px]:text-[15px]  p-1 min-[768px]:p-2 ">
+                    <p className="text-[13px] scale-up-105 md:text-[15px]  p-1 md:p-2 ">
                      {item.details}
                     </p>
                   </div>
                 </div>
-                <h5 className="text-[20px] min-[768px]:text-[25px] font-bold my-2">{item.designation}</h5>
-                <p className="text-[17px] min-[768px]:text-[20px] my-2 font-semibold">{item.name}</p>
+                <h5 className="text-[20px] md:text-[25px] font-bold my-2">{item.designation}</h5>
+                <p className="text-[17px] md:text-[20px] my-2 font-semibold">{item.name}</p>
               </section>
             )
         })

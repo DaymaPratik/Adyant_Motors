@@ -7,28 +7,28 @@ function Exportintro() {
     AOS.init({ duration: 1000 });
   }, []);
   return (
-    <section className="flex max-[956px]:flex-col justify-center py-5 items-center mx-auto w-[100%] min-[1024px]:w-[95%] min-h-screen h-fit ">
+    <section className="flex max-lg:flex-col justify-center py-5 items-center mx-auto w-[100%] xlg:w-[95%] min-h-screen h-fit ">
       <figure
-        className="relative w-[80%] m-5 min-[956px]:w-[40%]"
+        className="relative w-[80%] m-5 lg:w-[40%]"
         data-aos="fade-left"
       >
         <img
           src="https://images.unsplash.com/photo-1598194501777-edbff942e501?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt=""
-          className="h-[300px] min-[768px]:h-[350px] min-[956px]:h-[500px] w-full relative z-10"
+          className="h-[300px] md:h-[350px] lg:h-[500px] w-full relative z-10"
         />
         <div className="absolute top-[30px] left-[30px] w-full h-full bg-black"></div>
       </figure>
 
       <div
-        className="flex max-[956px]:mt-[40px] flex-col justify-center w-[90%] max-[956px]:mx-auto min-[956px]:w-[60%] min-[1024px]:w-[55%] gap-1 min-[600px]:gap-3 text-[17px] pl-2 min-[600px]:pl-10"
+        className="flex max-lg:mt-[40px] flex-col justify-center w-[90%] max-lg:mx-auto lg:w-[60%] xlg:w-[55%] gap-1 sm:gap-3 text-[17px] pl-2 sm:pl-10"
         data-aos="fade-right"
       >
-        <p className="text-[17px] min-[600px]:text-[20px] uppercase font-semibold text-blue-500">
+        <p className="text-[17px] sm:text-[20px] uppercase font-semibold text-blue-500">
           Exports
         </p>
-        <h5 className="text-[25px] min-[600px]:text-[35px] font-bold">Serving Customers Worldwide</h5>
-        <p className="font-semibold p-2 max-[500px]:text-[15px]">
+        <h5 className="text-[25px] sm:text-[35px] font-bold">Serving Customers Worldwide</h5>
+        <p className="font-semibold p-2 max-sm:text-[15px]">
           Building on a 30-year automotive heritage, our Group has refined a
           global distribution system, setting industry benchmarks for
           operational excellence. We have developed a high-performance partner

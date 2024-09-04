@@ -38,21 +38,21 @@ function CompanyDetailsBox() {
         
     ]
   return (
-   <main className="min-h-screen h-fit grid grid-cols-1 min-[768px]:grid-cols-2 w-[100%] mx-auto p-5 min-[768px]:p-10 gap-10  bg-no-repeat bg-center bg-cover bg-fixed
+   <main className="min-h-screen h-fit grid grid-cols-1 md:grid-cols-2 w-[100%] mx-auto p-[30px] xlg:p-[40px] gap-[30px] xlg:gap-[40px]  bg-no-repeat bg-center bg-cover bg-fixed
    bg-[url('https://images.unsplash.com/photo-1531315630201-bb15abeb1653?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')]">
       {
         companiesDetailsArray.map((item,idx)=>{
             return(
                 <div className=" flex flex-col py-2 px-5 bg-[#00000096] text-white transition ease-in duration-500 hover:shadow-[0px_0px_10px_5px_black] scale-up-105 rounded-md" key={idx} data-aos="fade-left">
-                    <h4 className="text-[20px] min-[600px]:text-[25px] min-[1024px]:text-[30px] text-center font-bold my-1">{item.title}</h4>
-                    <p className="text-center text-[13px] min-[600px]:text-[15px] font-semibold my-2 px-1">{item.details}</p>
-                    <p className="text-center text-[11px] min-[600px]:text-[14px] px-1">{item.extraDetails1}</p>
-                    <ul className="text-[14px] min-[600px]:text-[17px] font-bold my-2">
+                    <h4 className="text-[20px] sm:text-[25px] xlg:text-[30px] text-center font-bold my-1">{item.title}</h4>
+                    <p className="text-center text-[13px] sm:text-[15px] font-semibold my-2 px-1">{item.details}</p>
+                    <p className="text-center text-[11px] sm:text-[14px] px-1">{item.extraDetails1}</p>
+                    <ul className="text-[14px] sm:text-[17px] font-bold my-2">
                         <li> {item.extraDetailsArr[0]}</li>
                         <li> {item.extraDetailsArr[1]}</li>
                         <li> {item.extraDetailsArr[2]}</li>
                     </ul>
-                    <p className="text-center text-[11px] min-[600px]:text-[14px]  px-1 pb-5">{item.extraDetails2}</p>
+                    <p className="text-center text-[11px] sm:text-[14px]  px-1 pb-5">{item.extraDetails2}</p>
                 </div>
             )
         })
