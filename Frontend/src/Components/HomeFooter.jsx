@@ -1,5 +1,17 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AdminContext } from "../Context/AdminContextProvider";
+import { toast } from "react-toastify";
 function HomeFooter() {
+  const {admin,setAdmin}=useContext(AdminContext);
+  const handleLogoutFunction=()=>{
+    setAdmin({
+      email:"",
+      password:"",
+      isLogin:false
+    })
+    toast("Admin Logout Successfull")
+  }
   return (
     <footer className="bg-black py-20 h-fit grid grid-cols-1 sm:grid-cols-2 xlg:grid-cols-4  text-white text-base">
       <section className="flex flex-col items-center sm:pl-8 py-5 sm:py-10 w-full gap-5 ">
@@ -7,9 +19,9 @@ function HomeFooter() {
         <p className="text-2xl xxs:text-3xl font-semibold text-center">Adyant Motors</p>
       </section>
 
-      <section className="flex flex-col items-center xlg:items-start w-full pt-5 sm:pt-10 p-4 gap-3 ">
+      <section className="flex flex-col items-center xlg:items-start w-full pt-5 sm:pt-10 pl-2 gap-3 ">
         <h6 className="text-red-400 text-2xl font-bold">Contact Us</h6>
-        <p className="text-[15px] xlg:text-lg">
+        <p className="text-[13px] xlg:text-lg">
           <span className="font-bold">Email:</span> Adyant123@gmail.com
         </p>
         <p>
@@ -17,7 +29,7 @@ function HomeFooter() {
         </p>
       </section>
 
-      <section className="flex flex-col items-center xlg:items-start w-full pt-5 sm:pt-10 p-4 gap-3 ">
+      <section className="flex flex-col items-center xlg:items-start w-full pt-5 sm:pt-10 pl-2 gap-3 ">
         <h6 className="text-red-400 text-2xl font-bold">Quick Links</h6>
         <div className="flex flex-col items-center xlg:items-start gap-1">
           <Link to={"/about-us/brands"}>
@@ -29,10 +41,21 @@ function HomeFooter() {
           <Link to={"/about-us/companies"}>
           <p className="cursor-pointer hover:text-red-500 duration-200 w-fit">Our Comapnies</p>
           </Link>
+          {
+            admin.isLogin 
+            ? 
+          <Link to={"/"}>
+          <p className="cursor-pointer hover:text-red-500 duration-200 w-fit" onClick={handleLogoutFunction}>Admin Logout</p>
+          </Link>
+            :
+            <Link to={"/admin-login"}>
+          <p className="cursor-pointer hover:text-red-500 duration-200 w-fit">Admin Login</p>
+          </Link>
+          }
         </div>
       </section>
 
-      <section className="flex flex-col items-center xlg:items-start w-full pt-5 sm:pt-10 p-4 gap-3 ">
+      <section className="flex flex-col items-center xlg:items-start w-full pt-5 sm:pt-10 pl-2 gap-3 ">
         <h6 className="text-red-400 text-2xl font-bold">Locate Us</h6>
         <address className="font-normal max-sm:text-center text-sm xlg:text-base">
           <span className="font-bold text-lg">Address:</span>

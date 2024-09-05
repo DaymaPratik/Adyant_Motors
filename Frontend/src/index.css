@@ -9,7 +9,7 @@
 .slider-track{
     -webkit-animation: scroll 40s linear infinite;
     animation: scroll 40s linear infinite;
-    width: calc(370px * 10);
+    width: calc(250px * 10);
 
 }
 @-webkit-keyframes scroll {
@@ -17,7 +17,7 @@
         transform: translateX((0));
     }
     100%{
-        transform: translateX(calc(-370px * 5));
+        transform: translateX(calc(-250px * 5));
     }
 }
 @keyframes  scroll {
@@ -25,7 +25,7 @@
         transform: translateX((0));
     }
     100%{
-        transform: translateX(calc(-370px * 5));
+        transform: translateX(calc(-250px * 5));
     }
 }
 .scale-up-105{

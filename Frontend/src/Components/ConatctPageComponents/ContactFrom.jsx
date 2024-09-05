@@ -1,5 +1,5 @@
 import  { useState } from 'react';
-
+import { toast} from 'react-toastify';
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -15,10 +15,33 @@ const ContactForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form Data Submitted:', formData);
-    // You can add further logic to handle form submission here
+    try {
+      const response=await fetch("http://localhost:10000/submitContactFrom",{
+        method:"POST",
+        headers:{
+          "Content-Type":"application/json"
+        },
+        credentials:"include",
+        body:JSON.stringify(formData)
+      })
+      const data=await response.json();
+      console.log(data);
+      toast("From submited successfully")
+      setFormData({
+        name: '',
+        companyName: '',
+        phone: '',
+        email: '',
+        message: '',
+        enquiryType: '',
+      })
+    } catch (error) {
+      console.log("Erro while submitting contact form frontend",error);
+      
+    }
+   
   };
 
   return (
@@ -47,6 +70,7 @@ const ContactForm = () => {
             name="companyName"
             value={formData.companyName}
             onChange={handleChange}
+            required
             className="w-full p-1 sm:p-2 border border-gray-300 rounded-md bg-[#2c29296b] focus:outline-[#36315f] focus:border-0 focus:outline-none"
           />
         </div>
@@ -61,6 +85,7 @@ const ContactForm = () => {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
+            required
             className="w-full p-1 sm:p-2 border border-gray-300 rounded-md bg-[#2c29296b] focus:outline-[#36315f] focus:border-0 focus:outline-none"
           />
         </div>
@@ -85,6 +110,7 @@ const ContactForm = () => {
           name="enquiryType"
           value={formData.enquiryType}
           onChange={handleChange}
+          required
           className="w-full p-1 sm:p-2 border border-gray-300 rounded-md bg-[#2c29296b] focus:border-0 focus:outline-none"
         >
           <option value="" disabled>Enquiry Type</option>
@@ -104,6 +130,7 @@ const ContactForm = () => {
           value={formData.message}
           onChange={handleChange}
           rows="4"
+          required
           className="w-full p-1 sm:p-2 border border-gray-300 rounded-md bg-[#2c29296b] focus:outline-[#36315f] focus:border-0 focus:outline-none"
         />
       </div>

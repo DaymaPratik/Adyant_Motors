@@ -6,8 +6,10 @@ import { Link } from "react-router-dom";
 import AboutUsBar from "./AboutUsBar";
 import 'aos/dist/aos.css';
 import AOS from 'aos';
+import { AdminContext } from "../Context/AdminContextProvider";
 function Navbar() {
   const { showSideBar, setShowSideBar, setShowAboutUs, showAboutUs,aboutUsHover } =useContext(SideBarContext);
+  const {admin}=useContext(AdminContext)
   useEffect(() => {
     AOS.init({ duration: 1000 });
 }, []);
@@ -70,6 +72,12 @@ const handleAboutUsMouseLeave =() => {
             Careers
           </li>
         </Link>
+        {
+      admin.isLogin &&
+      <Link to={"/adminDashboard"}>
+     <li  className="border-2 border-transparent hover:text-[#ff0000] cursor-pointer hover:border-b-[#ff0000] transition duration-150 ease-in p-2">Dashboard</li>
+     </Link>
+       }
       </ul>
       <div
         className="text-[40px] hover:cursor-pointer hover:border-[#ff0000] hover:text-[#ff0000] transition ease-in duration-150 p-1 min-[1024px]:hidden"

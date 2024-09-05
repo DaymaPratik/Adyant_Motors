@@ -5,8 +5,10 @@ import { Link } from "react-router-dom";import { CiCircleChevDown } from "react-
 import { SideBarContext } from '../Context/SideBarContextProvider';
 import AboutUsSideBar from './AboutUsSideBar';
 import { GiCrossMark } from "react-icons/gi";
+import { AdminContext } from '../Context/AdminContextProvider';
 function SideBar() {  
   const {setShowAboutUs,showAboutUs}=useContext(SideBarContext)
+  const {admin}=useContext(AdminContext);
     useEffect(()=>{
         AOS.init({ duration: 1000 })
     },[])
@@ -49,6 +51,12 @@ function SideBar() {
      <Link to={"/careers"}>
      <li  className="border-2 border-transparent hover:text-[#ff0000] cursor-pointer hover:border-b-[#ff0000] transition duration-150 ease-in p-2">Careers</li>
      </Link>
+     {
+      admin.isLogin &&
+      <Link to={"/adminDashboard"}>
+     <li  className="border-2 border-transparent hover:text-[#ff0000] cursor-pointer hover:border-b-[#ff0000] transition duration-150 ease-in p-2">Dashboard</li>
+     </Link>
+     }
   </ul>
   )
 }

@@ -14,9 +14,9 @@ function ExportHero() {
      <h1 className="text-[35px] md:text-[50px] font-extrabold " data-aos="fade-left">Exports</h1>
      <div className="text-[20px] md:text-[25px]  font-semibold  mt-5" data-aos="fade-up">
      <p>
-        <Link to={"/"}> <span className='border-b-2 border-[#ff0000]' >Home</span></Link>
-          <span className='text-[#ff0000] text-[30px] font-extrabold'> &gt;</span> 
-         <span>Exports</span>
+        <Link to={"/"}> <span className='border-b-2 border-[#ff0000]' >Home </span></Link>
+          <span className='text-[#ff0000] text-[30px] font-extrabold'> &gt; </span> 
+         <span> Exports </span>
       </p>
      </div>
     </main>

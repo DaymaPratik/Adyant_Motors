@@ -11,13 +11,30 @@ import BrandsPage from "./Pages/BrandsPage";
 import ExportsPage from "./Pages/ExportsPage";
 import GalleryPage from "./Pages/GalleryPage";
 import HomeFooter from "./Components/HomeFooter";
+import AdminLogin from "./Pages/AdminLogin";
+import AdminContextProvider from "./Context/AdminContextProvider";
+import AdminDashboardPage from "./Pages/AdminDashboardPage";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
     <>
     <BrowserRouter>
-     <SideBarContextProvider>
+    <AdminContextProvider>
+    <SideBarContextProvider>
      <Navbar/>
+     <ToastContainer
+        position="top-center"
+        autoClose={4000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
      <Routes>
       <Route element={<ContactusPage/>} path="/contact-us"/>
       <Route element={<Homepage/>} path={"/"}/>
@@ -28,9 +45,12 @@ function App() {
       <Route element={<CompaniesPage/>} path="/about-us/companies"/>
       <Route element={<LeadershipPage/>} path="/about-us/leadership"/>
       <Route element={<BrandsPage/>} path="/about-us/brands"/>
+      <Route element={<AdminLogin/>} path="/admin-login"/>
+      <Route element={<AdminDashboardPage/>} path="/adminDashboard"/>
      </Routes>
      <HomeFooter/>
      </SideBarContextProvider>
+    </AdminContextProvider>
     </BrowserRouter>
     </>
   )
