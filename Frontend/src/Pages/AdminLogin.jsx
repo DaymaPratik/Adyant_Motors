@@ -39,47 +39,46 @@ function AdminLogin() {
             credentials: "include",
             body: JSON.stringify(admin),
         });
-        const data=await response.json();
-        console.log(data);
+   
         
-        // if (!response.ok) {
-        //     // Handle HTTP errors
-        //     const errorData = await response.json();
-        //     console.error("HTTP error:", errorData.message);
-        //     return;
-        // }
+        if (!response.ok) {
+            // Handle HTTP errors
+            const errorData = await response.json();
+            console.error("HTTP error:", errorData.message);
+            return;
+        }
 
-        // const data = await response.json();
-
-        // if (data.success) {
-        //     // Handle successful login
-        //     setAdmin(data.adminObj);
-        //     setAdmin(prevAdmin => ({
-        //         ...prevAdmin,
-        //         isLogin: true,
-        //     }));
-        //     navigate("/adminDashboard");
-        //     toast("Admin Login Successful");
-        // } else {
-        //     // Handle login errors based on the message
-        //     if (data.message === "This admin email doesn't exist") {
-        //         setValidUser({
-        //             passResponse: "",
-        //             emailResponse: "This admin email doesn't exist"
-        //         });
-        //     } else if (data.message === "Enter valid password") {
-        //         setValidUser({
-        //             emailResponse: "",
-        //             passResponse: "Enter valid password"
-        //         });
-        //     } else if (data.message === "All fields Required") {
-        //         setAllRequired("All Fields Required");
-        //         setValidUser({
-        //             emailResponse: "",
-        //             passResponse: ""
-        //         });
-        //     }
-        // }
+        const data = await response.json();
+        console.log(data);
+        if (data.success) {
+            // Handle successful login
+            setAdmin(data.adminObj);
+            setAdmin(prevAdmin => ({
+                ...prevAdmin,
+                isLogin: true,
+            }));
+            navigate("/adminDashboard");
+            toast("Admin Login Successful");
+        } else {
+            // Handle login errors based on the message
+            if (data.message === "This admin email doesn't exist") {
+                setValidUser({
+                    passResponse: "",
+                    emailResponse: "This admin email doesn't exist"
+                });
+            } else if (data.message === "Enter valid password") {
+                setValidUser({
+                    emailResponse: "",
+                    passResponse: "Enter valid password"
+                });
+            } else if (data.message === "All fields Required") {
+                setAllRequired("All Fields Required");
+                setValidUser({
+                    emailResponse: "",
+                    passResponse: ""
+                });
+            }
+        }
     } catch (error) {
         console.log("Error while user login", error);
     }
