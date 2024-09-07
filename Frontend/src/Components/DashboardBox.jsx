@@ -1,11 +1,10 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { FadeLoader } from "react-spinners";
 import { toast } from "react-toastify";
-import { SideBarContext } from "../Context/SideBarContextProvider";
-import {  FadeLoader } from "react-spinners";
 
 function DashboardBox() {
   const [array, setArray] = useState([]);
-  const { submitLoading, setSubmitLoading } = useContext(SideBarContext);
+  const [ submitLoading, setSubmitLoading ] = useState(false);
   const getContactDetailsFunction = async () => {
    
     try {
