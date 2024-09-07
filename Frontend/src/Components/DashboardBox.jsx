@@ -49,11 +49,13 @@ function DashboardBox() {
         return item._id != id;
       });
       setArray(fitleredArray);
-      setDeletingId(null);
+      
       console.log(data);
       toast("User details deleted successfully");
     } catch (error) {
       console.log("ERROR WHILE DELETEING CONTACT USER FRONTEND", error);
+      
+    } finally{
       setDeletingId(null);
     }
   };
