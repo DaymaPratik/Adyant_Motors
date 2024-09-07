@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 
 function DashboardBox() {
   const [array, setArray] = useState([]);
-  const [ submitLoading, setSubmitLoading ] = useState(false);
+  const [ deleteId, setDeletingId ] = useState(null);
   const getContactDetailsFunction = async () => {
    
     try {
@@ -32,7 +32,7 @@ function DashboardBox() {
     getContactDetailsFunction();
   }, []);
   const deleteContactUser = async (id) => {
-    setSubmitLoading(true);
+    setDeletingId(id);
     try {
       const response = await fetch(
         `https://adyant-motors.onrender.com/delete-contact-user/${id}`,
@@ -49,12 +49,12 @@ function DashboardBox() {
         return item._id != id;
       });
       setArray(fitleredArray);
-      setSubmitLoading(false);
+      setDeletingId(null);
       console.log(data);
       toast("User details deleted successfully");
     } catch (error) {
       console.log("ERROR WHILE DELETEING CONTACT USER FRONTEND", error);
-      setSubmitLoading(false);
+      setDeletingId(null);
     }
   };
 
@@ -69,9 +69,9 @@ function DashboardBox() {
         className=' grid grid-cols-1 sm:grid-cols-3  gap-5 border-2 border-gray-300 py-[50px] p-5 bg-gray-50 overflow-y-auto bg-no-repeat bg-center bg-cover bg-fixed
                 bg-[url("https://images.unsplash.com/photo-1714745454829-a64751d90480?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")]'
       >
-        {array.map((item, idx) => (
+        {array.map((item) => (
           <div
-            key={idx}
+            key={item._id}
             className="text-white p-4 bg-[#0f0b0b7a] shadow-[0px_0px_5px_1px_#ff0000]  rounded-lg  text-[14px] xs:text-[17px] lg:text-[20px]"
           >
             <p className=" font-semibold mb-2">
@@ -94,7 +94,7 @@ function DashboardBox() {
             <p className="font-semibold mb-4">
               Message: <span className="font-normal">{item.message}</span>
             </p>
-            {submitLoading && (
+            {deleteId === item._id(
               <div className="flex justify-center items-center py-2 my-2">
                 <FadeLoader color="#ff0000" />
               </div>
