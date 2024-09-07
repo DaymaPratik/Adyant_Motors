@@ -1,14 +1,13 @@
 import { useContext, useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { SideBarContext } from "../Context/SideBarContextProvider";
-import { BounceLoader, FadeLoader } from "react-spinners";
+import {  FadeLoader } from "react-spinners";
 
 function DashboardBox() {
   const [array, setArray] = useState([]);
-  const { loading, setLoading } = useContext(SideBarContext);
   const { submitLoading, setSubmitLoading } = useContext(SideBarContext);
   const getContactDetailsFunction = async () => {
-    setLoading(true);
+   
     try {
       const response = await fetch(
         "https://adyant-motors.onrender.com/getcontactdetails",
@@ -23,10 +22,10 @@ function DashboardBox() {
       const data = await response.json();
       console.log(data);
       setArray(data.contactsArray);
-      setLoading(false);
+     
     } catch (error) {
       console.log("ERROR WHILE GETTING CONTACT DETAILS FRONTEND", error);
-      setLoading(false);
+      
     }
   };
 
@@ -65,13 +64,8 @@ function DashboardBox() {
       <h3 className="text-[40px] py-3 font-bold text-center ">
         Contact Form User Details
       </h3>
-     {
-        loading
-        ?
-        <div className="min-h-[80vh] flex items-center justify-center ">
-            <BounceLoader/>
-        </div>
-        :
+     
+       
         <section
         className=' grid grid-cols-1 sm:grid-cols-3  gap-5 border-2 border-gray-300 py-[50px] p-5 bg-gray-50 overflow-y-auto bg-no-repeat bg-center bg-cover bg-fixed
                 bg-[url("https://images.unsplash.com/photo-1714745454829-a64751d90480?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")]'
@@ -116,7 +110,7 @@ function DashboardBox() {
           </div>
         ))}
       </section>
-     }
+     
     </main>
   );
 }
