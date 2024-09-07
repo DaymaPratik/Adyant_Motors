@@ -5,8 +5,9 @@ function SideBarContextProvider({children}) {
     const [showSideBar,setShowSideBar]=useState(false);
     const [showAboutUs,setShowAboutUs]=useState(false);
     const [aboutUsHover, setAboutUsHover] = useState(false);
+    const [loading,setLoading]=useState(true);
   return (
-    <SideBarContext.Provider value={{showSideBar,setShowSideBar,showAboutUs,setShowAboutUs, aboutUsHover, setAboutUsHover}}>
+    <SideBarContext.Provider value={{loading,setLoading,showSideBar,setShowSideBar,showAboutUs,setShowAboutUs, aboutUsHover, setAboutUsHover}}>
         {children}
     </SideBarContext.Provider>
   )

@@ -23,9 +23,10 @@ function App() {
     <AdminContextProvider>
     <SideBarContextProvider>
      <Navbar/>
-     <ToastContainer
+    <div className="relative w-[100%] top-[50%] xs:top-[5%]">
+    <ToastContainer
         position="top-center"
-        autoClose={4000}
+        autoClose={3000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
@@ -35,6 +36,7 @@ function App() {
         pauseOnHover
         theme="dark"
       />
+    </div>
      <Routes>
       <Route element={<ContactusPage/>} path="/contact-us"/>
       <Route element={<Homepage/>} path={"/"}/>

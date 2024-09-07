@@ -1,6 +1,8 @@
 import  { useState } from 'react';
 import { toast} from 'react-toastify';
+import { FadeLoader} from "react-spinners"
 const ContactForm = () => {
+  const [submitLoading,setSubmitLoading]=useState(false);
   const [formData, setFormData] = useState({
     name: '',
     companyName: '',
@@ -17,8 +19,9 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setSubmitLoading(true);
     try {
-      const response=await fetch("https://adyant-motors.onrender.com/submitContactFrom",{
+      const response=await fetch("http://localhost:10000/submitContactFrom",{
         method:"POST",
         headers:{
           "Content-Type":"application/json"
@@ -27,6 +30,7 @@ const ContactForm = () => {
         body:JSON.stringify(formData)
       })
       const data=await response.json();
+      setSubmitLoading(false);
       console.log(data);
       toast("From submited successfully")
       setFormData({
@@ -135,7 +139,13 @@ const ContactForm = () => {
         />
       </div>
 
-      
+      {
+            submitLoading
+            &&
+            <div className="flex justify-center items-center py-2 my-2">
+              <FadeLoader color="#ff0000" />
+            </div>
+          }
 
       <button
         type="submit"

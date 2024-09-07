@@ -36,7 +36,13 @@ function LeaderShipMemberBox() {
             designation:"Director",
             imageSrc:"https://images.unsplash.com/photo-1555436169-20e93ea9a7ff?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             details:"Driven with passion and interest in Automobiles, he was eager to join the thriving family business. After completing his studies in BTech and Masters in Entrepreneurship from Babson College in Boston, he spent a year in Mumbai to learn the aspects of the Group’s operations and business in a practical environment. With his skills honed, he has become an indispensable part of the Group. He was a key player in bringing brands, Idemitsu and CEAT under the Group’s umbrella."
-        }
+        },
+        {
+          name:"Rohit Tiwari",
+          designation:"Managing Director",
+          imageSrc:"/RohitTiwari.png",
+          details:"He took the torch from his father and is the second generation of the Group. After he underwent training with his father, he has kept in tune with the ethos of the Group. He believes that a successful business can be built through strong relationships and ethics. Under his leadership, he has made MKP Mobility a respected name in the Automotive Industry. Further, he is behind the Group’s association with the top Automotive brands in the country like Hero, Maruti, Tata, Royal Enfield, TVS, Honda and the expansion of operations throughout the state of Maharashtra."
+      }
              
     ]
     let delay=100;

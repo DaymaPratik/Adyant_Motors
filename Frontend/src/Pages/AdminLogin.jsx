@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import SideBar from "../Components/SideBar";
@@ -6,15 +6,26 @@ import { SideBarContext } from "../Context/SideBarContextProvider";
 import { AdminContext } from "../Context/AdminContextProvider";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import {BounceLoader, FadeLoader} from "react-spinners"
 
 
 // eslint-disable-next-line react/prop-types
 function AdminLogin() {
     const {admin,setAdmin}=useContext(AdminContext);
-    const {showSideBar}=useContext(SideBarContext)
+    const [submitLoading,setSubmitLoading]=useState(false);
+    const {showSideBar,loading,setShowSideBar,setLoading}=useContext(SideBarContext)
   const [allRequired, setAllRequired] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const navigate=useNavigate();
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+    setShowSideBar(false);
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  },[])
+
   const [validUser, setValidUser] = useState({
     emailResponse: "",
     passResponse: "",
@@ -30,8 +41,9 @@ function AdminLogin() {
 
   const loginUserFunction = async (e) => {
     e.preventDefault();
+    setSubmitLoading(true);
     try {
-        const response = await fetch("https://adyant-motors.onrender.com/admin-login", {
+        const response = await fetch("http://localhost:10000/admin-login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -59,6 +71,7 @@ function AdminLogin() {
             }));
             navigate("/adminDashboard");
             toast("Admin Login Successful");
+            setSubmitLoading(false)
         } else {
             // Handle login errors based on the message
             if (data.message === "This admin email doesn't exist") {
@@ -66,17 +79,20 @@ function AdminLogin() {
                     passResponse: "",
                     emailResponse: "This admin email doesn't exist"
                 });
+                setSubmitLoading(false)
             } else if (data.message === "Enter valid password") {
                 setValidUser({
                     emailResponse: "",
                     passResponse: "Enter valid password"
                 });
+                setSubmitLoading(false)
             } else if (data.message === "All fields Required") {
                 setAllRequired("All Fields Required");
                 setValidUser({
                     emailResponse: "",
                     passResponse: ""
                 });
+                setSubmitLoading(false)
             }
         }
     } catch (error) {
@@ -87,6 +103,12 @@ function AdminLogin() {
   
 
   return (
+    loading
+    ?
+    <div className="min-h-[100vh] flex justify-center items-center">
+    <BounceLoader/>
+  </div>
+    :
     <div className="max-w-screen overflow-x-hidden flex justify-center items-center min-h-screen h-fit relative bg-fixed bg-no-repeat bg-center bg-cover 
     bg-[url('https://images.unsplash.com/photo-1644924604597-373500f4cf28?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')]">
       {showSideBar && <SideBar />}
@@ -167,7 +189,14 @@ function AdminLogin() {
               </p>
             )}
           </div>
-          
+          {
+            submitLoading
+            &&
+            <div className="flex justify-center items-center py-2 my-2">
+              <FadeLoader color="#ff0000" />
+            </div>
+          }
+
           <button
             className="bg-[rgb(255,0,0)] border-2 border-red-500 transition duration-150 ease-in px-3 py-1 hover:bg-transparent mx-auto text-[20px] rounded-md w-[70%] block"
             onClick={loginUserFunction}
@@ -181,6 +210,8 @@ function AdminLogin() {
               All fields are required
             </p>
           )}
+
+          
         </form>
 
        

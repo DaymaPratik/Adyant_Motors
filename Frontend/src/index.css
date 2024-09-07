@@ -54,7 +54,7 @@
    
 }
 .changeBg:hover:before{
-    transform: translateY(0);
+    transform: translateY(0%);
 }
 .changeBg:hover{
     color: white;

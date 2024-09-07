@@ -5,14 +5,14 @@ const app=express();
 const ContactRouter=require("./Routes/contactRoute")
 const AdminLoginRouter=require("./Routes/AdminLoginRoute")
 app.use(cors({
-    origin: 'https://adyant-motors.vercel.app',
+    origin: 'http://localhost:5173',
     credentials: true,
     methods: 'POST,GET',
 }))
 app.use(express.json());
 
 
-mongoose.connect("mongodb+srv://pratikdayma45:LzJlylhbT6B09Fqd@cluster0.cpq5ooo.mongodb.net/Adyant_Motors")
+mongoose.connect("mongodb://localhost:27017/Adyant_Motors")
 .then(()=>{console.log("DB CONNECTED SUCCESSFULLY")})
 .catch((e)=>{console.log("ERROR CONNECTING DB",e);})
 app.use(ContactRouter)

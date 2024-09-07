@@ -38,10 +38,10 @@ function HomeWhatWeDo() {
 
     return (
         
-        <main className="min-h-[80vh] flex flex-col my-[50px] gap-5 justify-center items-center h-fit text-center w-[95%] mx-auto">
+        <main className="min-h-[50vh] flex flex-col my-[50px] gap-5 justify-center items-center  h-fit text-center w-[95%] mx-auto">
             <h2 className="font-bold text-center text-[25px] sm:text-[30px] md:text-[40px]">What We Do?</h2>
             <p className="font-bold text-center text-[17px] sm:text-[20px] text-blue-800">Our Services</p>
-            <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-5 w-full mx-auto place-items-center justify-items-center">
+            <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5 w-full mx-auto place-items-center justify-items-center">
                 {whatWeDoArray.map((item, idx) => {
                     delay += 50;
                     return (

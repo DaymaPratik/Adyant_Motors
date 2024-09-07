@@ -21,7 +21,7 @@ function HomeWhatWeDo2() {
     ]
     let delay=100;
   return (
-   <main className="min-h-[70vh] flex flex-col my-[50px] gap-5 justify-center items-center h-fit text-center w-[90%] mx-auto">
+   <main className="min-h-[60vh] flex flex-col my-[50px] gap-5 justify-center items-center h-fit text-center w-[95%] mx-auto">
     <h2 className="font-bold text-center text-[25px] xs:text-[30px] md:text-[40px] ">Packing And Loading</h2>
     <p className="font-bold text-center text-[17px] xs:text-[20px] text-blue-800 ">Services</p>
     <section className="grid grid-cols-1 sm:grid-cols-2 my-5 md:grid-cols-3 h-fit gap-5 lg:gap-10 w-[100%] mx-auto place-items-center justify-items-center" data-aos="fade-left" >
