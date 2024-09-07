@@ -43,7 +43,7 @@ function AdminLogin() {
     e.preventDefault();
     setSubmitLoading(true);
     try {
-        const response = await fetch("http://localhost:10000/admin-login", {
+        const response = await fetch("https://adyant-motors.onrender.com/admin-login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

@@ -21,7 +21,7 @@ const ContactForm = () => {
     e.preventDefault();
     setSubmitLoading(true);
     try {
-      const response=await fetch("http://localhost:10000/submitContactFrom",{
+      const response=await fetch("https://adyant-motors.onrender.com/submitContactFrom",{
         method:"POST",
         headers:{
           "Content-Type":"application/json"
