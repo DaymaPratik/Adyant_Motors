@@ -96,11 +96,11 @@ function DashboardBox() {
             <p className="font-semibold mb-4">
               Message: <span className="font-normal">{item.message}</span>
             </p>
-            {deleteId === item._id (
+            {/* {deleteId === item._id (
               <div className="flex justify-center items-center py-2 my-2">
                 <FadeLoader color="#ff0000" />
               </div>
-            )}
+            )} */}
             <button
               className="px-4 py-2 block mx-auto bg-red-600 text-white rounded-lg hover:bg-red-700 focus:outline-none focus:ring-2
                                  focus:ring-red-500"
