@@ -4,7 +4,7 @@ import { useContext, useEffect } from 'react';
 import { Link } from "react-router-dom";import { CiCircleChevDown } from "react-icons/ci";
 import { SideBarContext } from '../Context/SideBarContextProvider';
 import AboutUsSideBar from './AboutUsSideBar';
-import { GiCrossMark } from "react-icons/gi";
+import { MdClose } from "react-icons/md";
 import { AdminContext } from '../Context/AdminContextProvider';
 function SideBar() {  
   const {setShowAboutUs,showAboutUs}=useContext(SideBarContext)
@@ -28,7 +28,7 @@ function SideBar() {
          </Link>
          {showAboutUs ?
           <span className='block ml-5 w-fit text-[25px] hover:scale-105 hover:bg-black p-1  rounded-[50%] transition  ease-in duration-200' onClick={()=>{setShowAboutUs(false)}}>
-          <GiCrossMark className=''/> 
+          <MdClose className=''/> 
           </span>          
           :
           <span className='block ml-5 w-fit text-[30px] hover:scale-105 hover:bg-black p-1 rounded-[50%] transition  ease-in duration-200' onClick={()=>{setShowAboutUs(true)}}>

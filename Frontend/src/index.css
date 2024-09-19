@@ -5,14 +5,26 @@
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
+
 .slider-track{
     -webkit-animation: scroll 40s linear infinite;
     animation: scroll 40s linear infinite;
     width: calc(250px * 10);
 
 }
-@-webkit-keyframes scroll {
+.hide-scrollbar {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+  }
+  
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+/* @-webkit-keyframes scroll {
     0%{
         transform: translateX((0));
     }
@@ -27,7 +39,7 @@
     100%{
         transform: translateX(calc(-250px * 5));
     }
-}
+} */
 .scale-up-105{
     transition: ease-in 0.3s;
 }

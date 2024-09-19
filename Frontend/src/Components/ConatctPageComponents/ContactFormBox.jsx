@@ -10,7 +10,7 @@ function ContactFormBox() {
     <>
     <main className='flex justify-end my-10 items-center w-[90%] min-h-[100vh] h-fit mx-auto relative '>
     <figure className='max-md:hidden w-[70%] lg:w-[55%] absolute top-0 left-0' data-aos="fade-right">
-        <img src="https://plus.unsplash.com/premium_vector-1724125271400-1a4647e26389?q=80&w=1800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" 
+        <img src="contact1.jpg" alt="" 
         className='h-[100vh] w-full'/>
     </figure>
     <section className="max-md:mx-auto w-[95%] sm:w-[75%] md:w-[70%] lg:w-[55%] z-10  rounded-md relative 

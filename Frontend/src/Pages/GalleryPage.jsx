@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react"
+import { useContext, useEffect,useState } from "react"
 import GalleryHero from "../Components/GalleryComponents/GalleryHero"
 import SideBar from "../Components/SideBar"
 import { SideBarContext } from "../Context/SideBarContextProvider"
@@ -6,7 +6,8 @@ import GalleryImageBox from "../Components/GalleryComponents/GalleryImageBox"
 import {BounceLoader} from "react-spinners"
 
 function GalleryPage() {
-    const {showSideBar,setShowSideBar,setShowAboutUs,loading,setLoading}=useContext(SideBarContext)
+    const {showSideBar,setShowSideBar,setShowAboutUs,loading,setLoading}=useContext(SideBarContext);
+    const [large,setLarge]=useState(false);
     useEffect(()=>{
       window.scrollTo(0, 0);
       setShowSideBar(false);

@@ -23,7 +23,7 @@ function AboutUsBar() {
     </Link>
     <Link to={"/about-us/leadership"}>
       <li className="border-2 border-transparent hover:text-[#ff0000] cursor-pointer hover:border-b-[#ff0000] transition duration-150 ease-in p-2">
-        LeaderShip Team
+        Leadership Team
       </li>
     </Link>
 

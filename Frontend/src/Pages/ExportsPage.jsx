@@ -5,6 +5,7 @@ import { SideBarContext } from "../Context/SideBarContextProvider"
 import Exportintro from "../Components/ExportsComponents/Exportintro"
 import ExportMap from "../Components/ExportsComponents/ExportMap"
 import {BounceLoader} from "react-spinners"
+import HomeWhatWeDo2 from "../Components/HomePageComponents/HomeWhatWeDo2"
 function ExportsPage() {
     const {showSideBar,setShowSideBar,setShowAboutUs,loading,setLoading}=useContext(SideBarContext)
     useEffect(()=>{
@@ -30,6 +31,7 @@ function ExportsPage() {
     }
        <ExportHero/>
        <Exportintro/>
+       <HomeWhatWeDo2/>
        <ExportMap/>
    
    </div>

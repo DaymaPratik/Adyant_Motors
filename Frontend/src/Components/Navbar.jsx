@@ -1,5 +1,5 @@
 import { MdOutlineMenu } from "react-icons/md";
-import { GiCrossMark } from "react-icons/gi";
+import { MdClose } from "react-icons/md";
 import { useContext, useEffect } from "react";
 import { SideBarContext } from "../Context/SideBarContextProvider";
 import { Link } from "react-router-dom";
@@ -28,7 +28,7 @@ const handleAboutUsMouseLeave =() => {
 };
 
   return (
-    <nav className="flex justify-between items-center w-[100%] bg-[#69c0fece] z-[1000] text-white py-1 px-[20px] min-[768px]:px-[50px] min-[1256px]:px-[70px]  fixed">
+    <nav className="flex justify-between items-center w-[100%] bg-[#dee7eea1] z-[1000] text-black py-1 px-[20px] min-[768px]:px-[50px] min-[1256px]:px-[70px]  fixed">
       <div>
         <img src="/Adyant_Logo.png" alt="" className="h-[80px] " />
       </div>
@@ -85,7 +85,7 @@ const handleAboutUsMouseLeave =() => {
           setShowSideBar(!showSideBar);
         }}
       >
-        {showSideBar ? <GiCrossMark /> : <MdOutlineMenu />}
+        {showSideBar ? <MdClose /> : <MdOutlineMenu />}
       </div>
     </nav>
   );

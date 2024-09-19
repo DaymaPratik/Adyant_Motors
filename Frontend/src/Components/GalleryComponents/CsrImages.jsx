@@ -9,14 +9,17 @@ function CsrImages() {
     const [large,setLarge]=useState(false);
     const [largeImgSrc,setLargeImgSrc]=useState("")
     const handleLarge=(e)=>{
-        setLarge(true)
-        console.log(e.target.src);
+        setLarge(true);
         setLargeImgSrc(e.target.src);
+    }
+    const settingLarge =(e)=>{
+     if(large){
+        setLarge(false);
+     }
     }
   return (
    <>
-    <section className='grid relative grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-5 p-2 min-[768px]:p-5 w-[98%] min-[768px]:w-[90%] mx-auto'  data-aos="fade-left">
-   
+    <section  className='grid relative grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-5 p-2 min-[768px]:p-5 w-[98%] min-[768px]:w-[90%] mx-auto'  data-aos="fade-left" onClick={settingLarge}>
    <img src="https://images.unsplash.com/photo-1522071834198-118cc083b3f7?q=80&w=1993&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
    alt="" onClick={handleLarge} className='block h-[200px] min-[400px]:h-[300px] w-full'/>
    <img src="https://images.unsplash.com/photo-1522071834198-118cc083b3f7?q=80&w=1993&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
@@ -47,6 +50,7 @@ function CsrImages() {
    
 
 </section>
+
 {large && (
    <LargeImageBox setLarge={setLarge} setLargeImgSrc={setLargeImgSrc} largeImgSrc={largeImgSrc}/>
 )}
