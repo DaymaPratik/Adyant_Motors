@@ -11,12 +11,18 @@ import EmployeeImages from './EmployeeImages';
 
 function GalleryImageBox() {
 
-    const [type,setType]=useState("Infrastructure")
+    const [type,setType]=useState("Infrastructure");
+    const [large,setLarge]=useState(false);
+    const settingLarge =()=>{
+      if(large){
+         setLarge(false);
+      }
+     }
     useEffect(()=>{
         AOS.init({ duration: 1000 })
     },[])
   return (
-    <main className="flex justify-center my-10 text-center items-center gap-5 flex-col min-h-[60vh] h-fit">
+    <main className="flex justify-center my-10 text-center items-center gap-5 flex-col min-h-[60vh] h-fit" onClick={settingLarge}>
     <p className="font-bold text-[17px] xs:text-[20px] text-blue-800 " data-aos="fade-left">A Glance At!</p>
    <h3 className="font-bold text-[25px] xs:text-[30px] md:text-[40px]" data-aos="fade-left">Some Snapshots ?</h3>
     <div className='flex flex-wrap gap-2 sm:gap-4 md:gap-7 text-[13px] xs:text-[17px] md:text-[20px] lg:text-[25px] font-semibold w-[100%] 
@@ -30,13 +36,13 @@ function GalleryImageBox() {
         <p onClick={()=>{setType("Employee Motivation")}} className={`${type === "Employee Motivation" && "border-b-[3px] border-[#0000ff]"}  hover:cursor-pointer duration-150 ease-in hover:border-b-[3px] hover:border-[#ff0000] hover:text-[#ff0000]`}>Employee Motivation</p>
     </div>
 
-   {type === "Infrastructure"  &&  <InfraImages/>}
-    {type === "Products"  &&  <ProductsImages/>}
-    {type === "CRS"  &&  <CsrImages/>}
-    {type === "Awards"  &&  <AwardsImages/>}
-    {type === "Training"  &&  <TrainingImages/>}
-    {type === "Go Green"  &&  <GoGreenImages/>}
-    {type === "Employee Motivation"  &&  <EmployeeImages/>}
+   {type === "Infrastructure"  &&  <InfraImages large={large} setLarge={setLarge} settingLarge={settingLarge}/>}
+    {type === "Products"  &&  <ProductsImages large={large} setLarge={setLarge} settingLarge={settingLarge}/>}
+    {type === "CRS"  &&  <CsrImages large={large} setLarge={setLarge} settingLarge={settingLarge}/>}
+    {type === "Awards"  &&  <AwardsImages large={large} setLarge={setLarge} settingLarge={settingLarge}/>}
+    {type === "Training"  &&  <TrainingImages large={large} setLarge={setLarge} settingLarge={settingLarge}/>}
+    {type === "Go Green"  &&  <GoGreenImages large={large} setLarge={setLarge} settingLarge={settingLarge}/>}
+    {type === "Employee Motivation"  &&  <EmployeeImages large={large} setLarge={setLarge} settingLarge={settingLarge}/>}
  
 
   </main>

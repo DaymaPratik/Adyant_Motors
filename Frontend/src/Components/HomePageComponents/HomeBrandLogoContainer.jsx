@@ -20,18 +20,26 @@ function HomeBrandLogoContainer() {
     onMouseEnter={()=>{setShowArrows(true)}}
     >
         <div className=" flex gap-10 overflow-x-scroll hide-scrollbar text-center"  ref={sliderRef}> 
-        <img src="/hero.png" alt=""  className="h-[60px] sm:h-[100px] "/>
-        <img src="/honda.png" alt=""  className="h-[60px] sm:h-[100px] "/>
-        <img src="/ngk.png" alt=""  className="h-[60px] sm:h-[100px] "/>
-        <img src="/osram.jpeg" alt="" className="h-[60px] sm:h-[100px] "/>
-        <img src="/pricol.jpg" alt="" className="h-[60px] sm:h-[100px] "/>
-         <img src="/TVS.png" alt="" className="h-[60px] sm:h-[100px] "/>
-         <img src="/uno-minda.png" alt="" className="h-[60px] sm:h-[100px] "/>
-         <img src="/royalenfield.png" alt="" className="h-[60px] sm:h-[100px] "/>
-         <img src="/ngk.png" alt=""  className="h-[60px] sm:h-[100px] "/>
-        <img src="/osram.jpeg" alt="" className="h-[60px] sm:h-[100px] "/>
-        <img src="/pricol.jpg" alt="" className="h-[60px] sm:h-[100px] "/>
-         <img src="/TVS.png" alt="" className="h-[60px] sm:h-[100px] "/>
+        <img src="/bajajlogo.jpeg" alt=""  className="h-[60px] sm:h-[80px] "/>
+        <img src="/honda.png" alt=""  className="h-[60px] sm:h-[80px] "/>
+        <img src="/hero.png" alt=""  className="h-[60px] sm:h-[80px] "/>
+        <img src="/royalenfield.png" alt="" className="h-[60px] sm:h-[80px] "/>
+        <img src="/TVS.png" alt="" className="h-[60px] sm:h-[80px] "/>
+         <img src="/studdslogo.jpeg" alt="" className="h-[60px] sm:h-[80px] "/>
+         <img src="/uno-minda.png" alt="" className="h-[60px] sm:h-[80px] "/>
+         <img src="/vlogo.jpeg" alt=""  className="h-[60px] sm:h-[80px] "/>
+         <img src="/sandharlogo.jpeg" alt="" className="h-[60px] sm:h-[80px] "/>
+        <img src="/osram.jpeg" alt="" className="h-[60px] sm:h-[80px] "/>
+        <img src="/ngk.png" alt="" className="h-[60px] sm:h-[80px] "/>
+         <img src="/lgblogo.jpeg" alt="" className="h-[60px] sm:h-[80px] "/>
+         <img src="/pricol.jpg" alt="" className="h-[60px] sm:h-[80px] "/>
+         <img src="/gasketlogo.jpeg" alt="" className="h-[60px] sm:h-[80px] "/>
+         <img src="/mindalogo.png" alt="" className="h-[60px] sm:h-[80px] "/>
+         <img src="/steelbirdlogo1.png" alt="" className="h-[60px] sm:h-[80px] "/>
+         <img src="/rolonlogo.jpeg" alt=""  className="h-[60px] sm:h-[80px] "/>
+        <img src="/endurancelogo.jpeg" alt="" className="h-[60px] sm:h-[80px] "/>
+        <img src="/ngk.png" alt="" className="h-[60px] sm:h-[80px] "/>
+         <img src="/motul.png" alt="" className="h-[60px] sm:h-[80px] "/>
         </div>
         {
         showArrows && 

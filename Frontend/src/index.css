@@ -13,7 +13,7 @@
 .slider-track{
     -webkit-animation: scroll 40s linear infinite;
     animation: scroll 40s linear infinite;
-    width: calc(250px * 10);
+    width: calc(400px * 10);
 
 }
 .hide-scrollbar {
@@ -24,22 +24,7 @@
   .hide-scrollbar::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
   }
-/* @-webkit-keyframes scroll {
-    0%{
-        transform: translateX((0));
-    }
-    100%{
-        transform: translateX(calc(-250px * 5));
-    }
-}
-@keyframes  scroll {
-    0%{
-        transform: translateX((0));
-    }
-    100%{
-        transform: translateX(calc(-250px * 5));
-    }
-} */
+
 .scale-up-105{
     transition: ease-in 0.3s;
 }

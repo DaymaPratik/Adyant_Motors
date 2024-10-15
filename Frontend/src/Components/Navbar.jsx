@@ -28,11 +28,11 @@ const handleAboutUsMouseLeave =() => {
 };
 
   return (
-    <nav className="flex justify-between items-center w-[100%] bg-[#dee7eea1] z-[1000] text-black py-1 px-[20px] min-[768px]:px-[50px] min-[1256px]:px-[70px]  fixed">
+    <nav className="flex justify-between items-center w-[100%] bg-[#dee7eea1] z-[1000] text-black py-1 px-[20px] md:px-[50px] xl:px-[70px]  fixed">
       <div>
-        <img src="/Adyant_Logo.png" alt="" className="h-[80px] " />
+        <img src="/Adyant_Logo.png" alt="" className="h-[70px] " />
       </div>
-      <ul className="flex justify-center relative items-center gap-1 min-[1256px]:gap-5 px-5 text-[17px] min-[1256px]:text-[22px] font-semibold max-[1024px]:hidden">
+      <ul className="flex justify-center relative items-center gap-1 min-[1256px]:gap-5 px-5 text-[15x] xl:text-[18px] font-semibold max-[1024px]:hidden">
         <Link to={"/"}>
           <li className="border-2 border-transparent hover:text-[#ff0000] cursor-pointer hover:border-b-[#ff0000] transition duration-150 ease-in p-2">
             Home

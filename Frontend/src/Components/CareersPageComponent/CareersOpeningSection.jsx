@@ -20,7 +20,7 @@ function CareersOpeningSection() {
              Full Time
         </span>
        <span className="block ">    
-              Pune
+              Jalna
         </span>      
     </p>
       <h5 className="font-bold text-[20px] xs:text-[25px] md:text-[30px]">Senior Accountant</h5>
@@ -47,10 +47,10 @@ function CareersOpeningSection() {
              Full Time
         </span>
        <span className="block ">    
-              Pune
+              Jalna
         </span>      
     </p>
-      <h5 className="font-bold text-[20px] xs:text-[25px] md:text-[30px]">Senior Accountant</h5>
+      <h5 className="font-bold text-[20px] xs:text-[25px] md:text-[30px]">IT Manager</h5>
       <p className="text-[12px] xs:text-[14px] md:text-[17px]">I wanted to take a moment to introduce myself and my company, [Company Name]. We specialize in
          [briefly describe what your company does or offers]. I would love the opportunity to connect 
          with you and discuss how we can potentially work together.</p>
@@ -70,10 +70,10 @@ function CareersOpeningSection() {
              Full Time
         </span>
        <span className="block ">    
-              Pune
+              Jalna
         </span>      
     </p>
-      <h5 className="font-bold text-[20px] xs:text-[25px] md:text-[30px]">Senior Accountant</h5>
+      <h5 className="font-bold text-[20px] xs:text-[25px] md:text-[30px]">Sales Admin</h5>
       <p className="text-[12px] xs:text-[14px] md:text-[17px]">I wanted to take a moment to introduce myself and my company, [Company Name]. We specialize in
          [briefly describe what your company does or offers]. I would love the opportunity to connect 
          with you and discuss how we can potentially work together.</p>

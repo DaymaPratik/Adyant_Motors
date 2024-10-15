@@ -24,8 +24,8 @@ function HomeAboutSection() {
           its resilience and dedication to excellence in the automotive sector.
         </p>
         <figure  className="w-[85%] max-md:mx-auto md:w-[30%] xlg:w-[40%] relative">
-        <img src="/gear.avif" alt="" className="h-[330px] xlg:h-[400px] z-[10] relative" />
-        <div className='absolute w-full h-full bg-black top-[10px] left-[-10px] lg:top-[35px] lg:left-[-35px] '>
+        <img src="/gear.avif" alt="" className="h-[330px] xlg:h-[400px] w-full z-[10] relative" />
+        <div className='absolute w-full h-full bg-black top-[20px] left-[-20px] lg:top-[35px] lg:left-[-35px] '>
         
         </div> 
         </figure>
